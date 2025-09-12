@@ -1,9 +1,18 @@
 package com.ohgiraffers.dynamic;
 
 import java.util.List;
+import java.util.Map;
 
 public interface MenuMapper {
     List<MenuDTO> selectMenuByPrice(int maxPrice);
 
     List<MenuDTO> searchMenu(SearchCriteria searchCriteria);
+
+    List<MenuDTO> searchMenuBySuperCategory(SearchCriteria searchCriteria);
+
+    List<MenuDTO> searchMenuByRandomMenuCode(List<Integer> integers);
+
+    List<MenuDTO> searchMenuByCodeOrSearchAll(SearchCriteria searchCriteria);
+
+    List<MenuDTO> searchMenuByNameOrCategory(Map<String, Object> criteria);
 }
