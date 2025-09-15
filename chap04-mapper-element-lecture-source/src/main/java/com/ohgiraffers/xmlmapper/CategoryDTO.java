@@ -8,34 +8,34 @@ public class CategoryDTO {
     public CategoryDTO() {
     }
 
-    public CategoryDTO(int cateoryCode, String cateoryName, Integer refCateoryCode) {
-        this.categoryCode = cateoryCode;
-        this.categoryName = cateoryName;
-        this.refCategoryCode = refCateoryCode;
+    public CategoryDTO(int categoryCode, String categoryName, Integer refCategoryCode) {
+        this.categoryCode = categoryCode;
+        this.categoryName = categoryName;
+        this.refCategoryCode = refCategoryCode;
     }
 
     public int getCategoryCode() {
         return categoryCode;
     }
 
-    public void setCategoryCode(int cateoryCode) {
-        this.categoryCode = cateoryCode;
+    public void setCategoryCode(int categoryCode) {
+        this.categoryCode = categoryCode;
     }
 
     public String getCategoryName() {
         return categoryName;
     }
 
-    public void setCategoryName(String cateoryName) {
-        this.categoryName = cateoryName;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public Integer getRefCategoryCode() {
         return refCategoryCode;
     }
 
-    public void setRefCategoryCode(Integer refCateoryCode) {
-        this.refCategoryCode = refCateoryCode;
+    public void setRefCategoryCode(Integer refCategoryCode) {
+        this.refCategoryCode = refCategoryCode;
     }
 
     @Override
