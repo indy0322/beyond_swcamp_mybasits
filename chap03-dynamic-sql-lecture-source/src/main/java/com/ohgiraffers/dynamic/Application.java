@@ -56,6 +56,7 @@ public class Application {
                     ms.searchMenuByNameOrCategory(inputSearchCriteriaMap());
                     break;
                 case 3:
+                    ms.modifyMenu(inputChangeInfo());
                     break;
                 case 9:
                     return;
@@ -63,6 +64,25 @@ public class Application {
                     System.out.println("번호를 제대로 입력해주세요.");
             }
         }while(true);
+    }
+
+    private static Map<String, Object> inputChangeInfo() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("변경할 메뉴 코드를 입력하세요: ");
+        int menuCode = sc.nextInt();
+        System.out.print("변경할 메뉴 이름을 입력하세요: ");
+        sc.nextLine();
+        String menuName = sc.nextLine();
+        System.out.print("판매할 판매 여부를 결정해 주세요(Y/N): ");
+        String orderableStatus = sc.nextLine().toUpperCase();
+
+        Map<String, Object> critMap = new HashMap<>();
+        critMap.put("menuCode", menuCode);
+        critMap.put("menuName", menuName);
+        critMap.put("orderableStatus", orderableStatus);
+
+        return critMap;
     }
 
     private static Map<String, Object> inputSearchCriteriaMap() {
