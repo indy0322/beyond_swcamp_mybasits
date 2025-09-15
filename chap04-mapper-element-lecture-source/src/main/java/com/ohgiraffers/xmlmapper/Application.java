@@ -15,9 +15,15 @@ public class Application {
             System.out.print("메뉴 번호를 입력하세요: ");
             int num = sc.nextInt();
             switch (num) {
-                case 1: break;
-                case 2: break;
-                case 3: break;
+                case 1:
+                    es.selectResultMapTest();
+                    break;
+                case 2:
+                    es.selectResultMapAssociationTest();
+                    break;
+                case 3:
+                    es.selectResultMapCollectionTest();
+                    break;
             }
 
         }while(true);
